@@ -35,11 +35,14 @@ jobs:
           sdkmanager "platforms;android-35" \
             "build-tools;35.0.0"
 
+      
       - name: Build APK
         working-directory: WebViewRunner-android
         run: |
-          chmod +x gradlew
-          ./gradlew --no-daemon assembleDebug
+          curl -fL https://services.gradle.org/distributions/gradle-8.2-bin.zip -o /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /tmp
+          /tmp/gradle-8.2/bin/gradle --no-daemon assembleDebug
+
 
       - name: Upload APK
         uses: actions/upload-artifact@v4

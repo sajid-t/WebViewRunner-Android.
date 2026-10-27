@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="runner_canvas">#0D1116</color>
+    <color name="runner_surface">#121820</color>
+    <color name="runner_surface_raised">#1A2430</color>
+    <color name="runner_line">#263342</color>
+    <color name="runner_text">#F4F7FB</color>
+    <color name="runner_muted">#9DA8B8</color>
+    <color name="runner_blue">#3885FF</color>
+    <color name="runner_blue_pressed">#286CE2</color>
+    <color name="runner_green">#5ED0A1</color>
+    <color name="runner_red">#FF7F8E</color>
+    <color name="runner_amber">#F1BA6D</color>
+</resources>

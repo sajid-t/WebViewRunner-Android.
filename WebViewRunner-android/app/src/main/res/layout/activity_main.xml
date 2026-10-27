@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/runner_canvas"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.08"
+                android:text="WEBVIEWRUNNER"
+                android:textColor="@color/runner_text"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_secondary"
+                android:paddingStart="10dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="7dp"
+                android:text="NATIVE APK"
+                android:textColor="@color/runner_blue"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Authorized page automation, without the guesswork."
+            android:textColor="@color/runner_muted"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/back_button"
+                style="@style/RunnerNavButton"
+                android:contentDescription="Back"
+                android:text="‹" />
+            <Button
+                android:id="@+id/reload_button"
+                style="@style/RunnerNavButton"
+                android:layout_marginStart="6dp"
+                android:contentDescription="Reload"
+                android:text="↻" />
+            <Button
+                android:id="@+id/home_button"
+                style="@style/RunnerNavButton"
+                android:layout_marginStart="6dp"
+                android:contentDescription="Home"
+                android:text="⌂" />
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="9dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_secondary"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="pwthor.live/study/batches"
+                android:textColor="@color/runner_muted"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/page_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/runner_blue"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card">
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/runner_surface"
+                android:overScrollMode="never" />
+            <TextView
+                android:id="@+id/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/runner_surface"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="Loading target page..."
+                android:textColor="@color/runner_muted"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="RUNNER STATUS"
+                    android:textColor="@color/runner_muted"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/status_dot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/status_dot" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/status_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Loading target page..."
+                android:textColor="@color/runner_text"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/status_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="The authorized runner will be available when the WebView finishes loading."
+                android:textColor="@color/runner_muted"
+                android:textSize="11sp" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp">
+                <Button
+                    android:id="@+id/run_script_button"
+                    style="@style/RunnerPrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="▶  Run Script"
+                    android:textAllCaps="false"
+                    android:textColor="@color/runner_text"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <ProgressBar
+                    android:id="@+id/script_spinner"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:indeterminateTint="@color/runner_text"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

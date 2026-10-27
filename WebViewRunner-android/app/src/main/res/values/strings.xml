@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WebViewRunner</string>
+    <string name="home_url">https://pwthor.live/study/batches</string>
+    <string name="run_script">Run Script</string>
+    <string name="running_script">Running Script...</string>
+    <string name="script_completed">Script Completed</string>
+    <string name="script_failed">Script Failed</string>
+    <string name="page_loading">Loading target page...</string>
+    <string name="page_ready">Ready to run authorized script</string>
+    <string name="page_error">Unable to load this page. Check your connection and try again.</string>
+    <string name="native_webview_only">Native APK mode — browser preview cannot run evaluateJavascript().</string>
+</resources>
